@@ -4,7 +4,8 @@
   "info": {
     "singularName": "film",
     "pluralName": "films",
-    "displayName": "film"
+    "displayName": "film",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,6 +26,12 @@
     },
     "slug": {
       "type": "string"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "film"
     }
   }
 }
